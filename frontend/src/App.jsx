@@ -191,6 +191,24 @@ const RedirectUnmatched = () => {
     return null;
 };
 
+// const ProtectedRoute = ({ component: Component }) => {
+//     const { isAuthenticated, isLoadingAuth } = useAppContext();
+//     const navigate = useNavigate();
+
+//     useEffect(() => {
+//         // Only perform redirection if auth status is known AND user is NOT authenticated.
+//         if ( !isAuthenticated) {
+//             navigate('/login', { replace: true }); 
+//         }
+//     }, [isAuthenticated, navigate]); 
+
+
+//     // Render the target Component ONLY if the user is authenticated.
+//     // If not authenticated, the useEffect above will handle the redirect.
+//     return isAuthenticated ? <Component /> : null;
+// };
+
+
 const ProtectedRoute = ({ component: Component }) => {
     const { isAuthenticated, isLoadingAuth } = useAppContext();
     const navigate = useNavigate();

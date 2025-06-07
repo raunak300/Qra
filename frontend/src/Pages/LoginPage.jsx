@@ -101,6 +101,7 @@ const LoginPage = () => {
                             type="submit"
                             className='w-full bg-white text-indigo-900 font-semibold py-2 rounded-md hover:bg-indigo-100 transition'
                             disabled={loading} // Disable button when loading
+                            onClick={handelSubmit} // Handle form submission
                         >
                             {loading ? 'Logging in...' : 'Submit'}
                         </button>

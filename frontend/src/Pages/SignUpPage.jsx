@@ -4,6 +4,8 @@ import { Navigate, useNavigate } from 'react-router-dom';
 //name,email,backend on button submit click
 import axiosInstance from '../utils/axiosconfig';
 import { SIGNUP_ROUTE } from '../api/const';
+import { useEffect } from 'react';
+import { useAppContext } from '../context/Context';
 
 
 const SignUpPage = () => {
@@ -13,6 +15,18 @@ const SignUpPage = () => {
     const [password, setpassword] = useState("")
     const [loading, setloading] = useState(false)
     const [error, seterror] = useState(null)
+   
+       const { isLoadingAuth, isAuthenticated, login } = useAppContext();
+
+
+   useEffect(() => {
+        if (!isLoadingAuth && isAuthenticated) {
+            navigate('/', { replace: true });
+        }
+    }, [isAuthenticated, isLoadingAuth, navigate]);
+
+
+
     const handelSubmit=(async (e)=>{
         e.preventDefault();
         if (!fullName || !email || !password) {
@@ -30,9 +44,11 @@ const SignUpPage = () => {
             })
             if(response.status===201){
                 alert("signup Succesfull")
+                login()
                 navigate("/home");
             }else{
                 alert("signup failed");
+
             }
         } catch (error) {
             console.log("error at signup route frontend:",error);
