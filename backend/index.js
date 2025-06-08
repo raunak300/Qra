@@ -4,8 +4,11 @@ const app=express();
 const dotenv=require('dotenv').config();
 const port=process.env.PORT;
 const cookieParser = require('cookie-parser'); 
-
+const path=require("path");
 app.use(cookieParser()); 
+
+const staticPath=path.join(__dirname,"../uploads");
+app.use(express.static(staticPath));
 
 var corsOptions = {
   origin: process.env.FRONTEND_URL ,

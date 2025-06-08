@@ -26,8 +26,8 @@ const userSchema = new mongoose.Schema({
     userName: {
     type: String,
     required: false,
-    // unique: true,
-    // sparse: true,      // Unique only for docs where userName exists and is not null
+    unique: true,
+    sparse: true,      // Unique only for docs where userName exists and is not null
     default: null,
   },
     userImg: {
