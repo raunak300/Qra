@@ -3,8 +3,10 @@ import { createContext,useContext } from "react";
 export const AppContext=createContext({
     isAuthenticated:false,
     isLoadingAuth: true, 
+    userData: null,
     login: () => {},
-    logout: () => {}
+    logout: () => {},
+    
 })
 
 export const useAppContext=()=>{

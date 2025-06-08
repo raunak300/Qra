@@ -11,18 +11,22 @@ import { AppContext,useAppContext } from './context'
 import { useState, useEffect } from 'react'
 import { CHECK_ROUTE } from './api/const'
 import { useNavigate } from 'react-router-dom'
+import { GET_PROFILE_ROUTE } from './api/const'
 
  const AppProvider = ({ children }) => {
     const [isAuthenticated, setisAuthenticated] = useState(false);
     const [isLoadingAuth, setisLoadingAuth] = useState(true); 
-
-    const login = () => { 
+    const [userData, setUserData] = useState(null);//Profile page time added
+    const login = (data=null ) => { 
         setisAuthenticated(true);
-       
+        if (data) {
+            setUserData(data); 
+        }
     };
 
     const logout = () => {
         setisAuthenticated(false);
+        setUserData(null);
         
     };
 
@@ -34,16 +38,31 @@ import { useNavigate } from 'react-router-dom'
 
                 if (response.status === 200 && response.data.isValid) {
                     setisAuthenticated(true); 
+                    try {
+                        const profileResponse = await axios.get(GET_PROFILE_ROUTE, { withCredentials: true });
+                        if (profileResponse.status === 200) {
+                            setUserData(profileResponse.data); 
+                            console.log("User profile data fetched and set on app load/refresh:", profileResponse.data);
+                        } else {
+                            console.error("Failed to fetch user profile during initial check:", profileResponse.data);
+                            logout(); 
+                        }
+                    } catch (profileError) {
+                        console.error("Error fetching user profile during initial check:", profileError.response?.data?.message || profileError.message);
+                        logout(); 
+                    }
                 } else {
                     setisAuthenticated(false);
+                    setUserData(null)
                 }
-            } catch (err) {
+            }catch (err) {
                 if (err.response && err.response.status === 401) {
                     console.log("Authentication failed: No valid token/cookie found.");
                     logout(); 
                 } else {
                     console.error("Error during auth check:", err.response?.data?.message || err.message);
                     setisAuthenticated(false); 
+                    setUserData(null);
                 }
             } finally {
                 setisLoadingAuth(false); 
@@ -53,7 +72,7 @@ import { useNavigate } from 'react-router-dom'
     }, []); 
 
    
-    const contextValue = { isAuthenticated, isLoadingAuth, login, logout }; 
+    const contextValue = { isAuthenticated, isLoadingAuth,userData ,login, logout,setUserData }; 
 
     return (
         

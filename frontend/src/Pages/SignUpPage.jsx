@@ -41,11 +41,11 @@ const SignUpPage = () => {
                 fullName:fullName,
                 email:email,
                 password:password
-            })
+            },{withCredentials:true})
             if(response.status===201){
                 alert("signup Succesfull")
-                login()
-                navigate("/home");
+                login(response.data.user)
+                // navigate("/home");
             }else{
                 alert("signup failed");
 

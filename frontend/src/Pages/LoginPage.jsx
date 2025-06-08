@@ -31,15 +31,15 @@ const LoginPage = () => {
         }
         console.log("backend link", import.meta.env.VITE_BACKEND_LINK)
         setloading(true);
-        seterror(null);
+        
         try {
             const response = await axiosInstance.post(LOGIN_ROUTE, {
                 email: email,
                 password: password
-            })
+            },{withCredentials:true})
             if (response.status === 200) {
                 alert("login succesful")
-                login();
+                login(response.data.data);
 
             }
             else {

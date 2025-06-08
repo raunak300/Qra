@@ -91,7 +91,7 @@ const updateProfile = async (req, res) => {
     const userId = req.userInfo._id;
 
     const existingName=await User.findOne({_id:userId})
-    if(existingName){
+    if(existingName.userName!==null && existingName.userName !== undefined){
         return res.status(400).send({message:"you already have one can't change"});
     }
      const { userName } = req.body;
@@ -195,4 +195,16 @@ const updateImage = async (req, res) => {
 
 }
 
-module.exports = { signUp, login, check, updateProfile, updateImage };
+const profileSec=async(req,res)=>{
+    const user=req.userInfo.id;
+    console.log("user id recived in profileSec:", user);
+    const userData=await User.findById(user);
+    if(!userData){
+        return res.status(404 ).send({message:"User not found while callin for profile route"})
+    }
+    const userResponse=userData.toObject();
+    delete userResponse.password;
+    return res.status(200).send({message:"user profile data",user:userResponse});
+}
+
+module.exports = { signUp, login, check, updateProfile, updateImage,profileSec };

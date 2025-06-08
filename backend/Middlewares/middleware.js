@@ -8,11 +8,11 @@ const checkToken=(req,res,next)=>{
         if(!token){
              console.log("Access Denied: No token provided from middleware.");
              return res.status(401).json({ message: "Access Denied: No token provided." });
-             next();
+            //  next();
         }
         const decoded = jwt.verify(token, jwtVerify);
         req.userInfo=decoded;
-        console.log("u can check the info from here");
+        console.log("u can check the info from here in middleware",req.userInfo);
         next();
     } catch (error) {
         console.log("this is error in middleware:",error)
