@@ -7,9 +7,12 @@ const cookieParser = require('cookie-parser');
 const path=require("path");
 app.use(cookieParser()); 
 
-const staticPath=path.join(__dirname,"../uploads");
-app.use(express.static(staticPath));
+// const staticPath=path.join(__dirname,"../uploads");
+// app.use(express.static(staticPath));
 
+const staticUploadsPath = path.join(__dirname, "../uploads"); 
+app.use('/uploads', express.static(staticUploadsPath));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 var corsOptions = {
   origin: process.env.FRONTEND_URL ,
   credentials: true 

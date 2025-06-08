@@ -88,7 +88,7 @@ const check = (req, res) => {
 
 const updateProfile = async (req, res) => {
 
-    const userId = req.userInfo._id;
+    const userId = req.userInfo.id;
 
     const existingName=await User.findOne({_id:userId})
     if(existingName.userName!==null && existingName.userName !== undefined){
@@ -128,7 +128,7 @@ const updateProfile = async (req, res) => {
     }
 }
 const updateImage = async (req, res) => {
-    const userId = req.userInfo._id;
+    const userId = req.userInfo.id;
     try {
         if (!req.file) {
             return res.status(400).send({ message: "no file uploaded" });
@@ -204,6 +204,7 @@ const profileSec=async(req,res)=>{
     }
     const userResponse=userData.toObject();
     delete userResponse.password;
+    userResponse.userImg = userData.userImg;
     return res.status(200).send({message:"user profile data",user:userResponse});
 }
 
