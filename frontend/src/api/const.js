@@ -7,4 +7,7 @@ export const CHECK_ROUTE=`${AUTH_ROUTES}/check`
 export const GET_PROFILE_ROUTE=`${AUTH_ROUTES}/profile`
 export const UPDATE_PROFILE_ROUTE=`${AUTH_ROUTES}/profile/update`
 export const UPDATE_IMAGE_ROUTE=`${AUTH_ROUTES}/profile/photo`
+export const POST_ROUTE=`${AUTH_ROUTES}/post/create`
+export const GET_USER_POSTS=`${AUTH_ROUTES}/post/user`
+export const GET_ALL_POSTS=`${AUTH_ROUTES}/post/all`
 // export const GET_USER_INFO=`${AUTH_ROUTES}/user-info`

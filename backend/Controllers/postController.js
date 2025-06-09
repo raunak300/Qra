@@ -1,9 +1,9 @@
-import User from '../Model/userModel';
+const User =require( '../Model/userModel');
 const path = require('path');
 const fs = require('fs')
 const Post = require('../Model/postModel')
 
-export const createPost = async(req, res) => {
+const createPost = async(req, res) => {
     const userid = req.userInfo.id;
     const { title, textContent } = req.body;
     const img = req.file;
