@@ -20,6 +20,7 @@ var corsOptions = {
 app.use(cors(corsOptions))
 
 const User=require('./Model/userModel');
+const Post=require('./Model/postModel')
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
