@@ -10,4 +10,5 @@ export const UPDATE_IMAGE_ROUTE=`${AUTH_ROUTES}/profile/photo`
 export const POST_ROUTE=`${AUTH_ROUTES}/post/create`
 export const GET_USER_POSTS=`${AUTH_ROUTES}/post/user`
 export const GET_ALL_POSTS=`${AUTH_ROUTES}/post/all`
+export const LOGOUT=`${AUTH_ROUTES}/logout`
 // export const GET_USER_INFO=`${AUTH_ROUTES}/user-info`

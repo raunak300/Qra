@@ -208,4 +208,19 @@ const profileSec=async(req,res)=>{
     return res.status(200).send({message:"user profile data",user:userResponse});
 }
 
-module.exports = { signUp, login, check, updateProfile, updateImage,profileSec };
+const logout=async(req,res)=>{
+    try {
+        console.log("logout called")
+        res.clearCookie('token', {
+            httpOnly: true,
+            secure: true, // Use secure cookies in production
+            sameSite: "None"
+        });
+        res.status(200).send({message:"logout Success"})
+    } catch (error) {
+        console.log("error in logout",error)
+        res.status(500).send({message:"Inernal server error during logout"})
+    }
+}
+
+module.exports = { signUp, login, check, updateProfile, updateImage,profileSec,logout };

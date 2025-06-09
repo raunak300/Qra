@@ -48,4 +48,26 @@ const createPost = async(req, res) => {
     }
 }
 
-module.exports = {createPost};
+
+
+const providePost=async(req,res)=>{
+    const userId=req.userInfo.id;
+    if(!userId){
+        return res.stauts(400).send({message:"User id is req to send post"})
+
+    }
+    try {
+        //sending all post of all users
+        console.log("sending all post of all users")
+        const posts=await Post.find({}).sort({createdAt:-1})
+        if(posts.length===0){
+            return res.status(200).json({message:"no post found",posts:[]})
+        }
+        return res.status(200).json({message:"Check these post",posts:posts})
+    } catch (error) {
+        console.error("Error fetching posts:", error);
+        return res.status(500).json({ message: "Internal server error fetching posts." });
+    }
+}
+
+module.exports = {createPost,providePost};
