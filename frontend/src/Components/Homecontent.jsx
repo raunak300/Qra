@@ -26,13 +26,13 @@ const Homecontent = ({ post }) => { // Destructure 'post' prop
 
 
     return (
-        <div className='w-2/3 bg-indigo-950/10 flex flex-col min-h-[300px] rounded-lg overflow-hidden border border-indigo-700/30'> 
+        <div className='w-2/3 bg-indigo-950/10 flex flex-col min-h-[480px] max-h-[500px] rounded-lg overflow-hidden border border-indigo-700/30'> 
             {/* Image Section */}
-            <div className='h-auto max-h-[300px] w-full flex items-center justify-center overflow-hidden'>
+            <div className='h-auto max-h-[450px] w-full flex items-center justify-center overflow-hidden bg-indigo-900/5 '>
                 <img 
                     src={imageUrl} 
                     alt={post.title || "Post Image"} 
-                    className='w-full h-full object-cover rounded-t-lg'
+                    className='w-full h-full object-contain rounded-t-lg'
                     onError={(e) => { // Fallback in case image fails to load
                         e.target.onerror = null; 
                         e.target.src = defaultImageUrl;

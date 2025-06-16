@@ -24,27 +24,47 @@ const userSchema = new mongoose.Schema({
         required: true,
     },
     userName: {
-    type: String,
-    required: false,
-    unique: true,
-    sparse: true,      // Unique only for docs where userName exists and is not null
-    default: null,
-  },
+        type: String,
+        required: false,
+        unique: true,
+        sparse: true,      // Unique only for docs where userName exists and is not null
+        default: null,
+    },
     userImg: {
         type: String,
-        default:null
+        default: null
     },
-    uploadedImages: {
-        type: [String],
-        default: [],
-    },
+    uploadedPosts: [ // Changed to an array of objects
+        {
+            postId: { // It's good practice to link to the actual post
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Post' // Reference to the Post model
+            },
+            title: {
+                type: String,
+                required: true
+            },
+            imagePath: {
+                type: String,
+                required: true
+            },
+            textContent: {
+                type: String,
+                required: true
+            },
+            uploadedAt: { // To track when the post was added to the user's uploadedPosts
+                type: Date,
+                default: Date.now
+            }
+        }
+    ],
     createdAt: {
         type: Date,
         default: Date.now
     },
 })
 
-userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function (next) {
     try {
         // Only hash the password if it has been modified (or is new)
         if (!this.isModified('password')) {
@@ -59,7 +79,7 @@ userSchema.pre('save', async function(next) {
         next(err); // Pass the error to the next middleware
     }
 });
-const User=mongoose.model('User',userSchema);
+const User = mongoose.model('User', userSchema);
 
 
-module.exports= User;
+module.exports = User;

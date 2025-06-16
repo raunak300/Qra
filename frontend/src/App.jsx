@@ -12,6 +12,7 @@ import { useState, useEffect } from 'react'
 import { CHECK_ROUTE } from './api/const'
 import { useNavigate } from 'react-router-dom'
 import { GET_PROFILE_ROUTE } from './api/const'
+import Post from './Pages/Post'
 
  const AppProvider = ({ children }) => {
     const [isAuthenticated, setisAuthenticated] = useState(false);
@@ -175,6 +176,7 @@ function App() {
                         {/* Other Protected Routes: Use the same ProtectedRoute helper */}
                         <Route path="/profile" element={<ProtectedRoute component={Profile} />} />
                         <Route path="/post" element={<ProtectedRoute component={PostContent} />} />
+                        <Route path="/allposts" element={<ProtectedRoute component={Post} />} />
                         
                         {/* Catch-all Route: For any unmatched URL.
                             This will send unauthenticated users to login,
