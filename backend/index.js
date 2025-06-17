@@ -28,6 +28,8 @@ const userRoutes=require('./Routes/userRoutes');
 app.use('/api', userRoutes); 
 const postRoutes=require('./Routes/postRoutes')
 app.use('/api/post',postRoutes);
+const adminRoutes=require('./Routes/adminRoutes')
+app.use('/api/admin',adminRoutes);
 
 app.listen(port,()=>{
     console.log(`listening on ${port}`);

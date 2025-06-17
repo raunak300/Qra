@@ -11,4 +11,7 @@ export const POST_ROUTE=`${AUTH_ROUTES}/post/create`
 export const GET_USER_POSTS=`${AUTH_ROUTES}/post/user`
 export const GET_ALL_POSTS=`${AUTH_ROUTES}/post/all`
 export const LOGOUT=`${AUTH_ROUTES}/logout`
+export const HANDEL_LIKE = (postId) => `${AUTH_ROUTES}/post/like/${postId}`;
+export const TRENDS_POSTS= `${AUTH_ROUTES}/admin/trends`
+
 // export const GET_USER_INFO=`${AUTH_ROUTES}/user-info`

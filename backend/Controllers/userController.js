@@ -9,10 +9,13 @@ const signUp = async (req, res) => {
     try {
         const { fullName, email, password } = req.body;
         console.log("this is data received on backend at /signup check userController:", req.body);
+        const userName = `user${Date.now()}`; // Or use UUID or shortid
+
         const newUser = await new User({
             fullName,
             email,
-            password
+            password,
+            userName
         })
         await newUser.save();
         try {

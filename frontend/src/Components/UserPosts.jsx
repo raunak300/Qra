@@ -63,7 +63,12 @@ const UserPosts = ({ post }) => { // Destructure 'post' prop
     // Default image if post.imagePath is null or undefined
     const defaultImageUrl = "https://placehold.co/600x400/36454F/FFFFFF?text=No+Image+Available";
     // Construct the full image URL using post.imagePath
-    const imageUrl = post.imagePath ? `${import.meta.env.VITE_BACKEND_LINK}/${post.imagePath}` : defaultImageUrl;
+    // const imageUrl = post.imagePath ? `${import.meta.env.VITE_BACKEND_LINK}/${post.imagePath}` : defaultImageUrl;
+    const imageUrl = post.imagePath
+    ? post.imagePath.startsWith("http") 
+        ? post.imagePath 
+        : `${import.meta.env.VITE_BACKEND_LINK}/${post.imagePath}`
+    : defaultImageUrl;
 
     // For author display: Use userName directly from the post, then email, else 'Anonymous'
     // This assumes userName and email are direct fields on the post object (as recommended for backend)
