@@ -13,5 +13,6 @@ export const GET_ALL_POSTS=`${AUTH_ROUTES}/post/all`
 export const LOGOUT=`${AUTH_ROUTES}/logout`
 export const HANDEL_LIKE = (postId) => `${AUTH_ROUTES}/post/like/${postId}`;
 export const TRENDS_POSTS= `${AUTH_ROUTES}/admin/trends`
+export const HANDEL_TRENDS=`${AUTH_ROUTES}/admin/analyze-trends`
 
 // export const GET_USER_INFO=`${AUTH_ROUTES}/user-info`
