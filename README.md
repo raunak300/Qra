@@ -22,33 +22,30 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 ## 📽️ Project Preview
 
-## 🔐 Login & Signup Screens
-
-<div align="center">
-  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013554.png" alt="Login Page 1" width="600"/>
-  <br/>
-  <em>🔸 Basic login screen with input validation</em>
-</div>
 
 <br/>
-
-## 🔐 Login & Signup Screens
+## 🔐 Login & Authentication Screens
 
 <div align="center">
 
-### 🟪 Login Page  
-<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013554.png" width="600"/>
+### ✅ Login Successful  
+<img src="./frontend/assets/LoginAssets/LoginDone.png" alt="Login Done" width="600"/>
+<em>User successfully logs in with correct credentials.</em>
 
-### 🟩 Signup Page  
-<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013639.png" width="600"/>
+<br/><br/>
 
-### 🟦 Login Success State  
-<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013715.png" width="600"/>
+### 🛡️ Token Created  
+<img src="./frontend/assets/LoginAssets/TokenCreated.png" alt="JWT Token Created" width="600"/>
+<em>JWT token is generated and stored upon login for secure session handling.</em>
 
-### 🟥 Error State  
-<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013742.png" width="600"/>
+<br/><br/>
+
+### ❌ Invalid Login Attempt  
+<img src="./frontend/assets/LoginAssets/WrongLogin.png" alt="Wrong Login" width="600"/>
+<em>Error message shown when invalid credentials are submitted.</em>
 
 </div>
+
 
 
 > 🎥 [Watch Project Walkthrough Video](https://drive.google.com/file/d/1B_LYvy3s7FUTMwzqltgfhJsVgKWLA-q-/view?usp=sharing)
