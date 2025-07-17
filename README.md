@@ -116,12 +116,27 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 </div>
 
 <br/><br/>
-### 🧠 Admin Trend Analysis
-- Admin dashboard fetches top 10 posts (based on likes).
-- Posts are sent to Gemini API → returns summarized trends.
-- Admin sees 5-point summaries about community interest.
+### 🧠 How It Works
 
+Image Upload and update it via Storing locally in the multer
+### 3. Profile Image Functunality
 
+```js
+router.post('/profile/photo', checkToken, upload.single("profile-image"), updateImage);
+```
+- This route allows users to upload their profile photo.
+- It uses multer middleware to handle image file upload and saves it locally (can be later upgraded to cloud storage).
+- The checkToken middleware ensures only logged-in users can upload.
+- On successful upload, the image is linked to the user profile.
+
+``` js
+router.get('/profile', checkToken, profileSec);
+```
+- This route is used to fetch the user’s profile details like name, email, and profile image URL.
+- Called via a useEffect() in the Profile component after login or reload.
+- Ensures the UI always shows updated user info and image consistently.
+
+ <br/><br/>
 ## 🚀 Post/Upload Page UI 
 <div style="display: flex;  justify-content: space-between; gap: 12px;">
   <div style="flex: 1/3; text-align: center;">
@@ -166,13 +181,28 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 </div>
 
 <br/><br/>
----
-### 🧠 Admin Trend Analysis
+
+### 🧠 How It Works
 - Admin dashboard fetches top 10 posts (based on likes).
 - Posts are sent to Gemini API → returns summarized trends.
 - Admin sees 5-point summaries about community interest.
----
-<br/><br/>
+### 4. Admin Page and Trend fuctunality
+
+```js
+router.get('/trends',checkToken,trendPosts);
+```
+- This route gets/fetch all the photos from DB based on mostlike and newest in the timeline
+- It uses multer middleware to getPhotos based on it's localStorage.
+- The checkToken middleware ensures only admin can visit this page as admin_ID is stored in .env .
+
+``` js
+router.post('/analyze-trends', checkToken, analyzeTrends);
+```
+- This route is restricted to admin users and triggers AI-based analysis of recent posts.
+- The backend securely calls Google's Gemini API using your API key Stored in .env .
+- The result is shown on the admin dashboard as a 5-point insight summary, helping admins track what's popular or gaining traction.
+
+ <br/><br/>
 
 ## ⚙️ Tech Stack
 
