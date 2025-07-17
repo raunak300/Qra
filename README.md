@@ -121,7 +121,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 <div style="display: flex;  justify-content: space-between; gap: 12px;">
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/UserPosts/CreatePostPage.png" width="600" />
-    <p><strong>Profile :</strong> Default landing with no content added</p>
+    <p><strong>Post/Upload Page:</strong> Default landing with no content added</p>
   </div>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/UserPosts/ContentWrittenandmageselected.png" width="600" />
@@ -143,16 +143,16 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 ## 🛡️ Post/Upload Page UI 
 <div style="display: flex;  justify-content: space-between; gap: 12px;">
   <div style="flex: 1/3; text-align: center;">
-    <img src="./assests/UserPosts/CreatePostPage.png" width="600" />
-    <p><strong>Profile :</strong> Default landing with no content added</p>
+    <img src="./assests/AdminPanel/AdminHome.png" width="600" />
+    <p><strong>Home Page:</strong> Default landing Home Page but with extra Button Trends in SideBar</p>
   </div>
   <div style="flex: 1/3; text-align: center;">
-    <img src="./assests/UserPosts/ContentWrittenandmageselected.png" width="600" />
-    <p><strong>Profile with Image:</strong>Image Uploded with title and Description</p>
+    <img src="./assests/AdminPanel/ViewTrendingPage.png" width="600" />
+    <p><strong>Trending Page:</strong>Show top 10 images liked till now and arranges in order newest image comes first</p>
   </div>
   <div style="flex: 1/3; text-align: center;">
-    <img src="./assests/UserPosts/SelectedImageshownonPostsPage.png" width="600" />
-    <p><strong>Profile with Image:</strong>Image Uploded with title and Description Can be Seen on Personal Post Page</p>
+    <img src="./assests/AdminPanel/AnalysisResultWithgemini.png" width="600" />
+    <p><strong>Trends Analysis:</strong>Connected to Gemini Api on button press Analysis is provided by gemini API</p>
   </div>
 </div>
 
