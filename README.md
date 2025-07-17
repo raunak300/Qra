@@ -155,11 +155,7 @@ router.get('/profile', checkToken, profileSec);
     <p><strong>Profile with Image:</strong>Image Uploded with title and Description Can be Seen on Personal Post Page</p>
   </div>
 </div>
-<br/><br/>
-### 🧠 Admin Trend Analysis
-- Admin dashboard fetches top 10 posts (based on likes).
-- Posts are sent to Gemini API → returns summarized trends.
-- Admin sees 5-point summaries about community interest.
+
 
 
 <br/><br/>
