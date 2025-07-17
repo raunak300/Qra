@@ -47,11 +47,58 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 </div>
 
+## 🧠 How It Works (Step-by-Step)
+
+### 1. User Signup/Login
+- Frontend uses Context API for global auth state.
+- Credentials sent to `/api/auth/signup` or `/api/auth/login`.
+- Backend validates and returns JWT stored in localStorage.
 
 
+## 🏠 Homepage UI – Post Feed & Like Flow
 
+<div style="display: flex; justify-content: space-between; gap: 12px;">
+  <div style="flex: 1; text-align: center;">
+    <img src="./assets/HomeUser/NormalHomePage.png" width="100%" />
+    <p><strong>Normal Home Feed:</strong> Default landing feed with latest posts displayed.</p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="./assets/HomeUser/LikedPhoto.png" width="100%" />
+    <p><strong>Like Functionality:</strong> User likes a post and it updates in real time.</p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="./assets/HomeUser/PhotoremovedOnLikeOnrefresh.png" width="100%" />
+    <p><strong>Refresh Behavior:</strong> Liked post no longer appears after refresh to avoid duplicate likes.</p>
+  </div>
+</div>
 
+## 🧠 How It Works (Step-by-Step)
+
+### 2. Post Feed and Like Functionality
+- On initial page load or refresh, the entire feed is populated using a `useEffect` hook that fires once after authentication is verified.
+- This `useEffect` calls the route:
+
+  ```js
+  router.get('/all', checkToken, providePost);
 ---
+-This route is protected by the checkToken middleware, which:
+-1)Verifies the presence and validity of a JWT token
+-2)Decodes the token to identify the user
+-3)Blocks unauthorized requests with a 401 error if invalid
+
+-Posts are rendered with lazy loading. This means:
+-Only a limited number of posts are displayed initially
+-As the user scrolls, more posts are fetched and rendered dynamically
+-This helps maintain performance even with a large number of posts
+
+  ```js
+  router.post('/like/:postid', checkToken, likeHandel);
+```
+-This route updates the post’s likes array in the database with the user’s ID
+-The UI reflects the change immediately using optimistic updates
+-On refresh, the liked post is filtered from the main feed to prevent reliking the same post
+
+
 
 ## ⚙️ Tech Stack
 
@@ -70,12 +117,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 ---
 
-## 🧠 How It Works (Step-by-Step)
 
-### 1. User Signup/Login
-- Frontend uses Context API for global auth state.
-- Credentials sent to `/api/auth/signup` or `/api/auth/login`.
-- Backend validates and returns JWT stored in localStorage.
 
 ### 2. Post Creation
 - Authenticated users can create posts via `/api/post/create`.
