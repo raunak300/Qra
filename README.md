@@ -25,7 +25,8 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 
 <br/>
-### 🔐 Login & Authentication Screens
+---
+ 🔐 Login & Authentication Screens
 
 <div align="flex flex-col">
 
@@ -54,7 +55,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 - Credentials sent to `/api/auth/signup` or `/api/auth/login`.
 - Backend validates and returns JWT stored in localStorage.
 
-
+---
 ## 🏠 Homepage UI – Post Feed & Like Flow
 
 <div style="display: flex;  justify-content: space-between; gap: 12px;">
