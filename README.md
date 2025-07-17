@@ -32,27 +32,24 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 <br/>
 
-<div align="center">
-  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013639.png" alt="Signup Page" width="600"/>
-  <br/>
-  <em>🔸 Signup page with user role selection</em>
-</div>
-
-<br/>
+## 🔐 Login & Signup Screens
 
 <div align="center">
-  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013715.png" alt="Login Success State" width="600"/>
-  <br/>
-  <em>🔸 Successful login triggers JWT and redirects</em>
+
+### 🟪 Login Page  
+<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013554.png" width="600"/>
+
+### 🟩 Signup Page  
+<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013639.png" width="600"/>
+
+### 🟦 Login Success State  
+<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013715.png" width="600"/>
+
+### 🟥 Error State  
+<img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013742.png" width="600"/>
+
 </div>
 
-<br/>
-
-<div align="center">
-  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013742.png" alt="Error State" width="600"/>
-  <br/>
-  <em>🔸 Error state handling for incorrect credentials</em>
-</div>
 
 > 🎥 [Watch Project Walkthrough Video](https://drive.google.com/file/d/1B_LYvy3s7FUTMwzqltgfhJsVgKWLA-q-/view?usp=sharing)
 
