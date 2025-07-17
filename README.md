@@ -57,16 +57,16 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 ## 🏠 Homepage UI – Post Feed & Like Flow
 
-<div style="display: flex; justify-content: space-between; gap: 12px;">
-  <div style="flex: 1; text-align: center;">
+<div style="display: flex;  justify-content: space-between; gap: 12px;">
+  <div style="flex: 1/3; text-align: center;">
     <img src="./assests/HomeUser/NormalHomePage.png" width="100%" />
     <p><strong>Normal Home Feed:</strong> Default landing feed with latest posts displayed.</p>
   </div>
-  <div style="flex: 1; text-align: center;">
+  <div style="flex: 1/3; text-align: center;">
     <img src="./assests/HomeUser/LikedPhoto.png" width="100%" />
     <p><strong>Like Functionality:</strong> User likes a post and it updates in real time.</p>
   </div>
-  <div style="flex: 1; text-align: center;">
+  <div style="flex: 1/3; text-align: center;">
     <img src="./assests/HomeUser/PhotoremovedOnLikeOnrefresh.png" width="100%" />
     <p><strong>Refresh Behavior:</strong> Liked post no longer appears after refresh to avoid duplicate likes.</p>
   </div>
