@@ -111,7 +111,13 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 </div>
 
 
-## 🏠 Post/Upload Page UI 
+### 🧠 Admin Trend Analysis
+- Admin dashboard fetches top 10 posts (based on likes).
+- Posts are sent to Gemini API → returns summarized trends.
+- Admin sees 5-point summaries about community interest.
+
+
+## 🚀 Post/Upload Page UI 
 <div style="display: flex;  justify-content: space-between; gap: 12px;">
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/UserPosts/CreatePostPage.png" width="600" />
@@ -127,6 +133,35 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
   </div>
 </div>
 
+### 🧠 Admin Trend Analysis
+- Admin dashboard fetches top 10 posts (based on likes).
+- Posts are sent to Gemini API → returns summarized trends.
+- Admin sees 5-point summaries about community interest.
+
+
+
+## 🛡️ Post/Upload Page UI 
+<div style="display: flex;  justify-content: space-between; gap: 12px;">
+  <div style="flex: 1/3; text-align: center;">
+    <img src="./assests/UserPosts/CreatePostPage.png" width="600" />
+    <p><strong>Profile :</strong> Default landing with no content added</p>
+  </div>
+  <div style="flex: 1/3; text-align: center;">
+    <img src="./assests/UserPosts/ContentWrittenandmageselected.png" width="600" />
+    <p><strong>Profile with Image:</strong>Image Uploded with title and Description</p>
+  </div>
+  <div style="flex: 1/3; text-align: center;">
+    <img src="./assests/UserPosts/SelectedImageshownonPostsPage.png" width="600" />
+    <p><strong>Profile with Image:</strong>Image Uploded with title and Description Can be Seen on Personal Post Page</p>
+  </div>
+</div>
+
+
+
+### 🧠 Admin Trend Analysis
+- Admin dashboard fetches top 10 posts (based on likes).
+- Posts are sent to Gemini API → returns summarized trends.
+- Admin sees 5-point summaries about community interest.
 
 ## ⚙️ Tech Stack
 
@@ -149,12 +184,9 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 
 
-### 3. Admin Trend Analysis
-- Admin dashboard fetches top 10 posts (based on likes).
-- Posts are sent to Gemini API → returns summarized trends.
-- Admin sees 5-point summaries about community interest.
 
-### 4. Planned Feature – Sentiment Analysis
+
+### Planned Feature – Sentiment Analysis
 - Admin will be able to search users and fetch post sentiments.
 - Gemini API will analyze tone (positive/negative/neutral).
 - Results visualized in the dashboard.
