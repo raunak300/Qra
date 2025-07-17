@@ -82,9 +82,9 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
   router.get('/all', checkToken, providePost);
 ```
 - This route is protected by the checkToken middleware, which:
-- 1)Verifies the presence and validity of a JWT token
-- 2)Decodes the token to identify the user
-- 3)Blocks unauthorized requests with a 401 error if invalid
+- Verifies the presence and validity of a JWT token
+- Decodes the token to identify the user
+- Blocks unauthorized requests with a 401 error if invalid
 
 - Posts are rendered with lazy loading. This means:
 - Only a limited number of posts are displayed initially
@@ -98,6 +98,17 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 - The UI reflects the change immediately using optimistic updates
 - On refresh, the liked post is filtered from the main feed to prevent reliking the same post
 
+## 🏠 ProfilePage UI – Update Photo
+<div style="display: flex;  justify-content: space-between; gap: 12px;">
+  <div style="flex: 1/3; text-align: center;">
+    <img src="./assests/Profile/NoImage.png" width="600" />
+    <p><strong>Profile :</strong> Default landing with no Image.</p>
+  </div>
+  <div style="flex: 1/3; text-align: center;">
+    <img src="./assests/Profile/ImageAddedinProfile.png" width="600" />
+    <p><strong>Profile with Image:</strong>Image Uploded with help of Multer(LocalStorage).</p>
+  </div>
+</div>
 
 
 ## ⚙️ Tech Stack
@@ -119,10 +130,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 
 
-### 2. Post Creation
-- Authenticated users can create posts via `/api/post/create`.
-- Posts contain text, likes, user ref, and timestamps.
-- Posts are displayed in real-time feed using `useEffect` hooks.
+
 
 ### 3. Admin Trend Analysis
 - Admin dashboard fetches top 10 posts (based on likes).
