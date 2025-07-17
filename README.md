@@ -29,19 +29,19 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 <div align="center">
 
 ### ✅ Login Successful  
-<img src="./frontend/assets/LoginAssets/LoginDone.png" alt="Login Done" width="600"/>
+<img src="./assets/LoginAssets/LoginDone.png" alt="Login Done" width="600"/>
 <em>User successfully logs in with correct credentials.</em>
 
 <br/><br/>
 
 ### 🛡️ Token Created  
-<img src="./frontend/assets/LoginAssets/TokenCreated.png" alt="JWT Token Created" width="600"/>
+<img src="./assets/LoginAssets/TokenCreated.png" alt="JWT Token Created" width="600"/>
 <em>JWT token is generated and stored upon login for secure session handling.</em>
 
 <br/><br/>
 
 ### ❌ Invalid Login Attempt  
-<img src="./frontend/assets/LoginAssets/WrongLogin.png" alt="Wrong Login" width="600"/>
+<img src="./assets/LoginAssets/WrongLogin.png" alt="Wrong Login" width="600"/>
 <em>Error message shown when invalid credentials are submitted.</em>
 
 </div>
