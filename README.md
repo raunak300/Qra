@@ -2,8 +2,8 @@
 
 QRA (Quick Reach Analysis) is a full-stack microblogging platform where users can post updates in real time, interact with others, and where **admins can analyze platform trends using the Gemini API**. The platform is built with **React, Node.js, Express.js, MongoDB**, and **Tailwind CSS**, and includes user authentication, admin-only dashboards, and future-ready features like sentiment analysis.
 
-> 🎥 [Watch Project Walkthrough Video](https://drive.google.com/file/d/1B_LYvy3s7FUTMwzqltgfhJsVgKWLA-q-/view?usp=sharing)
----
+🎥 [Watch Project Walkthrough Video](https://drive.google.com/file/d/1B_LYvy3s7FUTMwzqltgfhJsVgKWLA-q-/view?usp=sharing)
+
 
 ## 🚀 Features
 
@@ -25,7 +25,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 
 <br/>
----
+
  🔐 Login & Authentication Screens
 
 <div align="flex flex-col">
