@@ -122,7 +122,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
     <p><strong>Profile with Image:</strong>Image Uploded with title and Description</p>
   </div>
   <div style="flex: 1/3; text-align: center;">
-    <img src="./assests/UserPosts/SelectedImageshownonPostPage.png" width="600" />
+    <img src="./assests/UserPosts/SelectedImageshownonPostsPage.png" width="600" />
     <p><strong>Profile with Image:</strong>Image Uploded with title and Description Can be Seen on Personal Post Page</p>
   </div>
 </div>
