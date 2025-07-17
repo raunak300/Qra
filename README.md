@@ -62,16 +62,18 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
     <img src="./assests/HomeUser/NormalHomePage.png" width="600" />
     <p><strong>Normal Home Feed:</strong> Default landing feed with latest posts displayed.</p>
   </div>
+  <br/><br/>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/HomeUser/LikedPhoto.png" width="600" />
     <p><strong>Like Functionality:</strong> User likes a post and it updates in real time.</p>
   </div>
+  <br/><br/>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/HomeUser/PhotoremovedOnLikeOnrefresh.png" width="600" />
     <p><strong>Refresh Behavior:</strong> Liked post no longer appears after refresh to avoid duplicate likes.</p>
   </div>
 </div>
-
+<br/><br/>
 ## 🧠 How It Works (Step-by-Step)
 
 ### 2. Post Feed and Like Functionality
@@ -98,19 +100,22 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 - The UI reflects the change immediately using optimistic updates
 - On refresh, the liked post is filtered from the main feed to prevent reliking the same post
 
+<br/><br/>
+
 ## 🏠 ProfilePage UI – Update Photo
 <div style="display: flex;  justify-content: space-between; gap: 12px;">
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/Profile/NoImage.png" width="600" />
     <p><strong>Profile :</strong> Default landing with no Image.</p>
   </div>
+  <br/><br/>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/Profile/ImageAddedinProfile.png" width="600" />
     <p><strong>Profile with Image:</strong>Image Uploded with help of Multer(LocalStorage).</p>
   </div>
 </div>
 
-
+<br/><br/>
 ### 🧠 Admin Trend Analysis
 - Admin dashboard fetches top 10 posts (based on likes).
 - Posts are sent to Gemini API → returns summarized trends.
@@ -123,45 +128,51 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
     <img src="./assests/UserPosts/CreatePostPage.png" width="600" />
     <p><strong>Post/Upload Page:</strong> Default landing with no content added</p>
   </div>
+  <br/><br/>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/UserPosts/ContentWrittenandmageselected.png" width="600" />
     <p><strong>Profile with Image:</strong>Image Uploded with title and Description</p>
   </div>
+  <br/><br/>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/UserPosts/SelectedImageshownonPostsPage.png" width="600" />
     <p><strong>Profile with Image:</strong>Image Uploded with title and Description Can be Seen on Personal Post Page</p>
   </div>
 </div>
-
+<br/><br/>
 ### 🧠 Admin Trend Analysis
 - Admin dashboard fetches top 10 posts (based on likes).
 - Posts are sent to Gemini API → returns summarized trends.
 - Admin sees 5-point summaries about community interest.
 
 
-
+<br/><br/>
 ## 🛡️ Post/Upload Page UI 
 <div style="display: flex;  justify-content: space-between; gap: 12px;">
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/AdminPanel/AdminHome.png" width="600" />
     <p><strong>Home Page:</strong> Default landing Home Page but with extra Button Trends in SideBar</p>
   </div>
+  <br/><br/>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/AdminPanel/ViewTrendingPage.png" width="600" />
     <p><strong>Trending Page:</strong>Show top 10 images liked till now and arranges in order newest image comes first</p>
   </div>
+  <br/><br/>
   <div style="flex: 1/3; text-align: center;">
     <img src="./assests/AdminPanel/AnalysisResultWithgemini.png" width="600" />
     <p><strong>Trends Analysis:</strong>Connected to Gemini Api on button press Analysis is provided by gemini API</p>
   </div>
 </div>
 
-
-
+<br/><br/>
+---
 ### 🧠 Admin Trend Analysis
 - Admin dashboard fetches top 10 posts (based on likes).
 - Posts are sent to Gemini API → returns summarized trends.
 - Admin sees 5-point summaries about community interest.
+---
+<br/><br/>
 
 ## ⚙️ Tech Stack
 
@@ -172,6 +183,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 | React Router     | JWT Authentication     | VSCode, GitHub            |
 | Context API      |                        |                           |
 
+<br/><br/>
 ---
 
 ## 📈 System Architecture
@@ -180,11 +192,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 ---
 
-
-
-
-
-
+<br/><br/>
 
 ### Planned Feature – Sentiment Analysis
 - Admin will be able to search users and fetch post sentiments.
@@ -193,5 +201,4 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 ---
 
-## 📁 Folder Structure
 
