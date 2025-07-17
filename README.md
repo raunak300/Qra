@@ -25,7 +25,7 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 
 <br/>
-## 🔐 Login & Authentication Screens
+### 🔐 Login & Authentication Screens
 
 <div align="flex flex-col">
 
