@@ -22,9 +22,37 @@ QRA (Quick Reach Analysis) is a full-stack microblogging platform where users ca
 
 ## 📽️ Project Preview
 
-![Home Page](./frontend/assets/homepage.png)
-![Admin Dashboard](./frontend/assets/admin_dashboard.png)
-![Post Feed](./frontend/assets/feed.png)
+## 🔐 Login & Signup Screens
+
+<div align="center">
+  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013554.png" alt="Login Page 1" width="600"/>
+  <br/>
+  <em>🔸 Basic login screen with input validation</em>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013639.png" alt="Signup Page" width="600"/>
+  <br/>
+  <em>🔸 Signup page with user role selection</em>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013715.png" alt="Login Success State" width="600"/>
+  <br/>
+  <em>🔸 Successful login triggers JWT and redirects</em>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="./frontend/assets/LoginAssets/Screenshot 2025-07-17 013742.png" alt="Error State" width="600"/>
+  <br/>
+  <em>🔸 Error state handling for incorrect credentials</em>
+</div>
 
 > 🎥 [Watch Project Walkthrough Video](https://drive.google.com/file/d/1B_LYvy3s7FUTMwzqltgfhJsVgKWLA-q-/view?usp=sharing)
 
